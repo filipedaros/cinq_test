@@ -9,7 +9,7 @@
   },
   {
     "Description": "5.55 mm and 7 mm double open-ended wrench",
-    "Price": 12.99,
+    "Price": 20.0,
     "ProductCode": "TBX-0045",
     "ProductId": 6,
     "ProductName": "Wrench",
@@ -41,15 +41,15 @@
   },
   {
     "Description": "Standard two-button video game controller",
-    "Price": 35.95,
+    "Price": 0.48,
     "ProductCode": "GMG-0042",
     "ProductId": 10,
-    "ProductName": "Video Game Controller",
+    "ProductName": "Video Game",
     "ReleaseDate": "2002-10-15T04:00:00-03:00"
   },
   {
     "Description": "Everyone wants one!",
-    "Price": 0.0,
+    "Price": 100.0,
     "ProductCode": "APL-123456",
     "ProductId": 11,
     "ProductName": "iWatch",

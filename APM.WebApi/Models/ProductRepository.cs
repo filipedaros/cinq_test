@@ -12,13 +12,13 @@ namespace APM.WebAPI.Models
     /// Stores the data in a json file so that no database is required for this
     /// sample application
     /// </summary>
-    public class ProductRepository
+    public class ProductRepository : IProductRepository
     {
         /// <summary>
         /// Creates a new product with default values
         /// </summary>
         /// <returns></returns>
-        internal Product Create()
+        public Product Create()
         {
             Product product = new Product
             {
@@ -31,7 +31,7 @@ namespace APM.WebAPI.Models
         /// Retrieves the list of products.
         /// </summary>
         /// <returns></returns>
-        internal List<Product> Retrieve()
+        public List<Product> Retrieve()
         {
             var filePath = HostingEnvironment.MapPath(@"~/App_Data/product.json");
 
@@ -47,7 +47,7 @@ namespace APM.WebAPI.Models
         /// </summary>
         /// <param name="product"></param>
         /// <returns></returns>
-        internal Product Save(Product product)
+        public Product Save(Product product)
         {
             // Read in the existing products
             var products = Retrieve();
@@ -67,7 +67,7 @@ namespace APM.WebAPI.Models
         /// <param name="id"></param>
         /// <param name="product"></param>
         /// <returns></returns>
-        internal Product Save(int id, Product product)
+        public Product Save(int id, Product product)
         {
             // Read in the existing products
             var products = Retrieve();
@@ -96,7 +96,7 @@ namespace APM.WebAPI.Models
             File.WriteAllText(filePath, json);
         }
 
-        internal void Delete(int productId)
+        public bool Delete(int productId)
         {
             // Read in the existing products
             var products = Retrieve();
@@ -106,8 +106,12 @@ namespace APM.WebAPI.Models
 
             // Only "commit" if removed exactly 1 product
             if (removed == 1)
+            {
                 WriteData(products);
+                return true;
+            }
 
+            return false;
         }
     }
 }

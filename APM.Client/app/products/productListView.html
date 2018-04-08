@@ -53,7 +53,8 @@
                     <td>{{ product.productName}}</td>
                     <td>{{ product.productCode }}</td>
                     <td>{{ product.releaseDate | date }}</td>
-                    <td>{{ product.price | currency }}</td>
+                    <!--Here it would be nice to get the currency from a select or user preferences-->
+                    <td>{{ product.price | customCurrency: 'euro' }}</td>
                 </tr>
             </tbody>
         </table>

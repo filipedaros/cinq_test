@@ -46,11 +46,39 @@
                        type="text"
                        placeholder="Product Code (required)"
                        ng-model="vm.product.productCode"
+                       product-code
                        required>
             </div>
-            <span class="help-block has-error"
-                  ng-show="productForm.inputProductCode.$invalid ">
-                Product Code is required
+            <span class="help-block has-error">
+                <span ng-show="productForm.inputProductCode.$error.required">
+                    Product Code is required.
+                </span>
+                <span ng-show="productForm.inputProductCode.$error.codeValidator">
+                    Product Code must match format AAA-9999.
+                </span>
+            </span>
+        </div>
+
+        <div class="form-group"
+             ng-class="{'has-error':productForm.inputPrice.$invalid &&
+                                    productForm.inputPrice.$dirty}">
+            <label class="col-md-2 control-label" for="inputPrice">Price U$</label>
+
+            <div class="col-md-4">
+                <input class="form-control"
+                       id="inputPrice"
+                       name="inputPrice"
+                       type="number"
+                       placeholder="Product Price (required)"
+                       ng-model="vm.product.price"
+                       min="0.01"
+                       step="any"
+                       required>
+            </div>
+            <span class="help-block has-error">
+                <span ng-show="productForm.inputPrice.$error.required">
+                    Product Price is required.
+                </span>
             </span>
         </div>
 

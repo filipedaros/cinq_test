@@ -79,4 +79,21 @@
         };
 
     }
+
+    angular
+        .module("productManagement")
+        .directive('productCode', function () {
+            return {
+                require: 'ngModel',
+                link: function (scope, element, attr, ctrl) {
+                    function validateProductCode(value) {
+                        var regex = new RegExp('[A-Z]{3}-[0-9]{4}$'); //AAA-9999
+                        ctrl.$setValidity('codeValidator', regex.test(value));
+                        return value;
+                    }
+
+                    ctrl.$parsers.push(validateProductCode);
+                }
+            }
+        })
 }());

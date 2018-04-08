@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APM.WebApi", "APM.WebApi\APM.WebApi.csproj", "{C1292784-8A11-4B30-8330-7E5811ADB848}"
 EndProject
@@ -27,6 +27,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "APM.Client", "http://localh
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APM.WebApi.Test", "APM.WebApi.Test\APM.WebApi.Test.csproj", "{790AEDA7-5307-4CB0-A2BF-A170F128D34A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,8 +43,15 @@ Global
 		{FE890FCF-A603-4E8D-94B2-E0D44528D673}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE890FCF-A603-4E8D-94B2-E0D44528D673}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{FE890FCF-A603-4E8D-94B2-E0D44528D673}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{790AEDA7-5307-4CB0-A2BF-A170F128D34A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{790AEDA7-5307-4CB0-A2BF-A170F128D34A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{790AEDA7-5307-4CB0-A2BF-A170F128D34A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{790AEDA7-5307-4CB0-A2BF-A170F128D34A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {71BBE0E4-EA99-4FC2-B003-E1821F1171A7}
 	EndGlobalSection
 EndGlobal
