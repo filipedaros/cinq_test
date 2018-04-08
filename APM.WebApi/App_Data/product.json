@@ -1,0 +1,66 @@
+[
+  {
+    "Description": "Steel hammer update test",
+    "Price": 8.99,
+    "ProductCode": "TBX-0048",
+    "ProductId": 5,
+    "ProductName": "Hammer",
+    "ReleaseDate": "2013-05-21T04:00:00-03:00"
+  },
+  {
+    "Description": "5.55 mm and 7 mm double open-ended wrench",
+    "Price": 12.99,
+    "ProductCode": "TBX-0045",
+    "ProductId": 6,
+    "ProductName": "Wrench",
+    "ReleaseDate": "2013-05-15T04:00:00-03:00"
+  },
+  {
+    "Description": "Reel-type push lawn mower",
+    "Price": 15.29,
+    "ProductCode": "GDN-0006",
+    "ProductId": 7,
+    "ProductName": "Push Mower",
+    "ReleaseDate": "2008-05-01T04:00:00-03:00"
+  },
+  {
+    "Description": "15-inch steel blade hand saw",
+    "Price": 11.55,
+    "ProductCode": "TBX-0022",
+    "ProductId": 8,
+    "ProductName": "Saw",
+    "ReleaseDate": "2009-05-15T04:00:00-03:00"
+  },
+  {
+    "Description": "14-in Aluminum Pipe Wrench",
+    "Price": 13.95,
+    "ProductCode": "TBX-0045",
+    "ProductId": 9,
+    "ProductName": "Pipe Wrench",
+    "ReleaseDate": "2009-06-15T04:00:00-03:00"
+  },
+  {
+    "Description": "Standard two-button video game controller",
+    "Price": 35.95,
+    "ProductCode": "GMG-0042",
+    "ProductId": 10,
+    "ProductName": "Video Game Controller",
+    "ReleaseDate": "2002-10-15T04:00:00-03:00"
+  },
+  {
+    "Description": "Everyone wants one!",
+    "Price": 0.0,
+    "ProductCode": "APL-123456",
+    "ProductId": 11,
+    "ProductName": "iWatch",
+    "ReleaseDate": "2015-03-10T20:55:08.535279-03:00"
+  },
+  {
+    "Description": "11-inch Apple Laptop",
+    "Price": 0.0,
+    "ProductCode": "APL-0002",
+    "ProductId": 12,
+    "ProductName": "MacBook Air",
+    "ReleaseDate": "2015-05-04T09:56:49.2228231-03:00"
+  }
+]

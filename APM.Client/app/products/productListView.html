@@ -1,0 +1,61 @@
+<div class="panel panel-primary"
+     ng-controller="ProductListCtrl as vm">
+    <div class="panel-heading"
+         style="font-size:large">
+        Product List
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-1">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for product name..." ng-model="vm.searchCriteria">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="filterProduct()">Search!</button>
+                </span>
+            </div>
+        </div>
+        <div class="col-sm-5" ng-show="vm.filteredResult">
+            <label>Searching for {{vm.searchCriteria}}...</label>
+        </div>
+    </div>
+
+    <!--Adjust layout and remove brs-->
+    <br />
+    <div class="row">
+        <div class="col-sm-2 col-sm-offset-1">
+            <a ng-href="#editProduct/0">New product</a>
+        </div>
+
+    </div>
+
+    <!--Adjust layout and remove brs-->
+    <br />
+    <br />
+
+    <div class="panel-body">
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <td>Option</td>
+                    <td>Product</td>
+                    <td>Code</td>
+                    <td>Available</td>
+                    <td>Price</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="product in vm.products">
+                    <td>
+                        <a href="#" ng-click="deleteProduct(product)">Delete</a> |
+                        <a ng-href="#editProduct/{{product.productId}}">Edit</a>
+                    </td>
+                    <td>{{ product.productName}}</td>
+                    <td>{{ product.productCode }}</td>
+                    <td>{{ product.releaseDate | date }}</td>
+                    <td>{{ product.price | currency }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
