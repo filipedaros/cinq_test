@@ -4,6 +4,7 @@
       ng-controller="ProductEditCtrl as vm">
     <fieldset>
         <legend>{{vm.title}}</legend>
+        
         <div class="form-group"
              ng-class="{'has-error':productForm.inputProductName.$invalid &&
                                     productForm.inputProductName.$dirty}">
@@ -62,24 +63,33 @@
         <div class="form-group"
              ng-class="{'has-error':productForm.inputPrice.$invalid &&
                                     productForm.inputPrice.$dirty}">
-            <label class="col-md-2 control-label" for="inputPrice">Price U$</label>
+            <label class="col-md-2 control-label" for="inputPrice">Price ({{vm.selectedCurrency.name}})</label>
 
-            <div class="col-md-4">
-                <input class="form-control"
-                       id="inputPrice"
-                       name="inputPrice"
-                       type="number"
-                       placeholder="Product Price (required)"
-                       ng-model="vm.product.price"
-                       min="0.01"
-                       step="any"
-                       required>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <div class="input-group-addon">{{vm.selectedCurrency.symbol}}</div>
+
+                    <input class="form-control"
+                           id="inputPrice"
+                           name="inputPrice"
+                           type="number"
+                           placeholder="Product Price (required)"
+                           ng-model="vm.priceCustomCurrency"
+                           ng-change="updatePrices()"
+                           min="0.01"
+                           step="any"
+                           required>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <select ng-blur="updatePrices()" class="form-control" ng-model="vm.selectedCurrency" ng-options="y.name for (x, y) in vm.availableCurrencies"></select>
             </div>
             <span class="help-block has-error">
                 <span ng-show="productForm.inputPrice.$error.required">
                     Product Price is required.
                 </span>
             </span>
+
         </div>
 
         <div class="form-group">

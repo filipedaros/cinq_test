@@ -41,7 +41,12 @@
                     <td>Product</td>
                     <td>Code</td>
                     <td>Available</td>
-                    <td>Price</td>
+                    <td width="20%">
+                        <div class="form-inline">
+                            <span>Price in </span>
+                            <select class="form-control" ng-model="vm.selectedCurrency" ng-options="y.name for (x, y) in vm.availableCurrencies"></select>
+                        </div>
+                    </td>
                 </tr>
             </thead>
             <tbody>
@@ -54,7 +59,7 @@
                     <td>{{ product.productCode }}</td>
                     <td>{{ product.releaseDate | date }}</td>
                     <!--Here it would be nice to get the currency from a select or user preferences-->
-                    <td>{{ product.price | customCurrency: 'euro' }}</td>
+                    <td>{{ product.price | customCurrency: vm.selectedCurrency.rate: vm.selectedCurrency.symbol }}</td>
                 </tr>
             </tbody>
         </table>

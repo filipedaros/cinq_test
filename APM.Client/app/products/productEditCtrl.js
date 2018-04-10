@@ -10,10 +10,19 @@
         var vm = this;
         vm.product = {};
         vm.message = '';
-
+        //In real world this would come from webapi
+        vm.availableCurrencies = [
+            { symbol : '\u20AC', name : 'Euro', rate : 1 / 0.9 }, //1 dollar -> 0.9 euros
+            { symbol : 'R$', name : 'Real', rate : 1 / 3.4}, //1 dollar -> ~ 3.4 reais
+            { symbol : 'U$', name : 'Dollar', rate : 1 }
+        ]
+        vm.selectedCurrency = vm.availableCurrencies[0];
+        
         productResource.get({ id: $routeParams.id },
             function (data) {
                 vm.product = data;
+                vm.priceCustomCurrency = parseFloat((vm.product.price / vm.selectedCurrency.rate).toFixed(2));
+
                 vm.originalProduct = angular.copy(data);
 
                 if (vm.product && vm.product.productId) {
@@ -29,6 +38,10 @@
                     vm.message += response.data.exceptionMessage;
                 }
             });
+
+        $scope.updatePrices = function () {
+            vm.product.price = parseFloat(vm.priceCustomCurrency * vm.selectedCurrency.rate);
+        }
 
         vm.submit = function () {
             vm.message = '';

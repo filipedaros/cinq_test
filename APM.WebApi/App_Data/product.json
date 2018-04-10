@@ -1,7 +1,7 @@
 [
   {
     "Description": "Steel hammer update test",
-    "Price": 8.99,
+    "Price": 100.0,
     "ProductCode": "TBX-0048",
     "ProductId": 5,
     "ProductName": "Hammer",
@@ -9,7 +9,7 @@
   },
   {
     "Description": "5.55 mm and 7 mm double open-ended wrench",
-    "Price": 20.0,
+    "Price": 111.11111111111111,
     "ProductCode": "TBX-0045",
     "ProductId": 6,
     "ProductName": "Wrench",
@@ -33,7 +33,7 @@
   },
   {
     "Description": "14-in Aluminum Pipe Wrench",
-    "Price": 13.95,
+    "Price": 90.0,
     "ProductCode": "TBX-0045",
     "ProductId": 9,
     "ProductName": "Pipe Wrench",
@@ -49,7 +49,7 @@
   },
   {
     "Description": "Everyone wants one!",
-    "Price": 100.0,
+    "Price": 90.00,
     "ProductCode": "APL-123456",
     "ProductId": 11,
     "ProductName": "iWatch",
@@ -57,7 +57,7 @@
   },
   {
     "Description": "11-inch Apple Laptop",
-    "Price": 0.0,
+    "Price": 10.0,
     "ProductCode": "APL-0002",
     "ProductId": 12,
     "ProductName": "MacBook Air",
